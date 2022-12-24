@@ -6,10 +6,14 @@
 
 int main()
 {
-	MYSQL* conn;
+	MYSQL* connect;
 	MYSQL_ROW row;
 	MYSQL_RES *res;
-	
+	connect = mysql_init(0);
+	connect = mysql_real_connect(connect, "localhost", "root", "zgsx1997", "save", 3306, NULL, 0);
+	if (connect) {
+		std::cout << "Successful connection to database";
+	}
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
