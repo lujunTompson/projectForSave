@@ -16,6 +16,7 @@ private:
 
 public:
 	friend class AccountBuilder;
+	friend ostream& operator<<(ostream& os, const Account& obj);
 	static AccountBuilder create(string accountNumber);
 };
 
