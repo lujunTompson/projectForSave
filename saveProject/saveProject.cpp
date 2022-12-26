@@ -3,6 +3,41 @@
 
 #include <iostream>
 #include <mysql.h>
+#include "account.h"
+#include "AccountBuilder.h"
+
+using namespace std;
+
+bool query(MYSQL* mysql, const char *sql) {
+	int res = mysql_real_query(mysql, sql, strlen(sql));
+	if (res != 0) {
+		cerr << "mysql_real_query failed!" << mysql_error(mysql) << endl;
+		return false;
+	}
+	else {
+		return true;
+	}
+}
+
+MYSQL_RES * storeResult(MYSQL* mysql) {
+	MYSQL_RES *result = mysql_store_result(mysql);
+	if (!result) {
+		cerr << "mysql_store_result failed!" << mysql_error(mysql) << endl;
+		return NULL;
+	}
+	else {
+		return result;
+	}
+}
+
+void freeResult(MYSQL_RES *result) {
+	if (result) {
+		mysql_free_result(result);
+		result = NULL;
+	}
+}
+
+
 
 int main()
 {
@@ -10,10 +45,15 @@ int main()
 	MYSQL_ROW row;
 	MYSQL_RES *res;
 	connect = mysql_init(0);
-	connect = mysql_real_connect(connect, "localhost", "root", "zgsx1997", "save", 3306, NULL, 0);
-	if (connect) {
-		std::cout << "Successful connection to database";
+	connect = mysql_real_connect(connect, "localhost", "root", "zgsx1997", "save", 3306, NULL, CLIENT_MULTI_STATEMENTS);
+	if (!connect) {
+		cout << "MySQL connect failed!" << mysql_error(connect) << endl;
 	}
+	string sql = "";
+	
+	
+	Account account = Account::create("dfdfd").city("city").dob("dib");
+
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
