@@ -5,6 +5,9 @@
 #include <mysql.h>
 #include "account.h"
 #include "AccountBuilder.h"
+#include "MySQLConnector.h"
+#include "RuleOneResp.h"
+#include "RuleTwoResp.h"
 
 using namespace std;
 
@@ -41,7 +44,8 @@ void freeResult(MYSQL_RES *result) {
 
 int main()
 {
-	MYSQL* connect;
+	/*
+		MYSQL* connect;
 	MYSQL_ROW row;
 	MYSQL_RES *res;
 	connect = mysql_init(0);
@@ -53,6 +57,16 @@ int main()
 	
 	
 	Account account = Account::create("dfdfd").city("city").dob("dib");
+	*/
+
+	MySQLConnector* mysql = new MySQLConnector("localhost", "root", "zgsx1997", "save");
+
+	//get results by rule1
+	mysql->filterByRuleOne();
+
+	//get results by rule2
+	mysql->filterByRuleTwo();
+
 
 }
 

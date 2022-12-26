@@ -1,6 +1,9 @@
 #pragma once
 #include <mysql.h>
 #include <string>
+#include <vector>
+#include "RuleOneResp.h"
+#include "RuleTwoResp.h"
 
 using namespace std;
 
@@ -11,10 +14,15 @@ private:
 
 public:
 	MySQLConnector(const string host, const string user,
-		const string password, const string port);
+		const string password, const string database);
+
 	~MySQLConnector();
 
-	vector<
+	vector<RuleOneResp> filterByRuleOne();
+
+	vector<RuleTwoResp> filterByRuleTwo();
+
+	void message(string, const char*);
 };
 
 

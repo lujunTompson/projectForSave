@@ -7,13 +7,11 @@ using namespace std;
 class RuleOneResp
 {
 private:
-	string name, accountNumber, merchant;
-	int transactionNumber;
-	double transactionAmount;
+	string name, accountNumber, merchant,transactionNumber,transactionAmount;
 
 public:
 	RuleOneResp(string name, string accountNum, 
-		int transNum, string merchant, double transAmount): 
+		string transNum, string merchant, string transAmount): 
 		name(name), accountNumber(accountNum), transactionNumber(transNum),
 		merchant(merchant), transactionAmount(transAmount) {}
 
