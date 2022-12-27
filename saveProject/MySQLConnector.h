@@ -22,7 +22,7 @@ public:
 
 	vector<RuleTwoResp> filterByRuleTwo();
 
-	void message(string, const char*);
+	void message(string, const char* = "");
 };
 
 

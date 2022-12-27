@@ -18,12 +18,6 @@
     <ClCompile Include="saveProject.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="account.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="AccountBuilder.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="MySQLConnector.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -33,14 +27,11 @@
     <ClCompile Include="RuleTwoResp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="account.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="AccountBuilder.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="MySQLConnector.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -48,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RuleTwoResp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,6 +10,9 @@ MySQLConnector::MySQLConnector(const string host, const string user, const strin
 	if (!dbConnect) {
 		message("MySQL connect failed! ", mysql_error(dbConnect));
 	}
+	else {
+		message("MySQL connect success! ");
+	}
 }
 
 MySQLConnector::~MySQLConnector()
@@ -77,7 +80,6 @@ vector<RuleOneResp> MySQLConnector::filterByRuleOne()
 			string transactionAmount(row[4]);
 			RuleOneResp* curRes = new RuleOneResp(name, accountNum, transNum, merchant, transactionAmount);
 			resps.push_back(*curRes);
-			cout << *curRes;
 		}
 	}
 
@@ -115,7 +117,6 @@ vector<RuleTwoResp> MySQLConnector::filterByRuleTwo()
 			string actLocation(row[4]);
 			RuleTwoResp* curResult = new RuleTwoResp(name, accountNum, transNum, expLocation, actLocation);
 			resps.push_back(*curResult);
-			cout << *curResult;
 		}
 	}
 

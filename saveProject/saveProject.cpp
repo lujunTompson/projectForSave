@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <mysql.h>
-#include "account.h"
-#include "AccountBuilder.h"
+#include <vector>
+
 #include "MySQLConnector.h"
 #include "RuleOneResp.h"
 #include "RuleTwoResp.h"
+#include "Util.h"
 
 using namespace std;
 
@@ -40,7 +41,9 @@ void freeResult(MYSQL_RES *result) {
 	}
 }
 
+void printResults() {
 
+}
 
 int main()
 {
@@ -62,11 +65,14 @@ int main()
 	MySQLConnector* mysql = new MySQLConnector("localhost", "root", "zgsx1997", "save");
 
 	//get results by rule1
-	mysql->filterByRuleOne();
+	vector<RuleOneResp> resultOne = mysql->filterByRuleOne();
+	Util::printResultsForRuleOne(resultOne);
 
 	//get results by rule2
-	mysql->filterByRuleTwo();
+	vector<RuleTwoResp> resultTwo = mysql->filterByRuleTwo();
+	Util::printResultsForRuleTwo(resultTwo);
 
+	
 
 }
 
