@@ -5,12 +5,6 @@
 using namespace std;
 
 ostream& operator<<(ostream& os, const RuleOneResp& obj) {
-	/*return os << obj.name << "  "
-		<< obj.accountNumber << "  "
-		<< obj.transactionNumber << "  "
-		<< obj.merchant << "  "
-		<< obj.transactionAmount << endl;
-		*/
 	return os << left
 		<< '|' << setfill(' ') << setw(20)  << obj.name
 		<< '|' << setfill(' ') << setw(20) << obj.accountNumber
