@@ -126,5 +126,5 @@ vector<RuleTwoResp> MySQLConnector::filterByRuleTwo()
 void MySQLConnector::message(string msg, const char* error)
 {
 	string errorStr(error);
-	cout << msg << error << endl;
+	cout << msg << " " << errorStr << endl;
 }
