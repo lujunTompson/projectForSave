@@ -38,9 +38,9 @@ We use local MySQL database. The database name is `save`.
 
 Here we have two tables:
 
-`account_info` table schema:
+`account_info` table schema:![image-20221227114740608](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114740608.png)
 
-![image-20221227114740608](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114740608.png)
+
 
 `transaction` table schema:
 
