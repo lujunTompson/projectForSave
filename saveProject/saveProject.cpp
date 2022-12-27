@@ -12,67 +12,28 @@
 
 using namespace std;
 
-bool query(MYSQL* mysql, const char *sql) {
-	int res = mysql_real_query(mysql, sql, strlen(sql));
-	if (res != 0) {
-		cerr << "mysql_real_query failed!" << mysql_error(mysql) << endl;
-		return false;
-	}
-	else {
-		return true;
-	}
-}
-
-MYSQL_RES * storeResult(MYSQL* mysql) {
-	MYSQL_RES *result = mysql_store_result(mysql);
-	if (!result) {
-		cerr << "mysql_store_result failed!" << mysql_error(mysql) << endl;
-		return NULL;
-	}
-	else {
-		return result;
-	}
-}
-
-void freeResult(MYSQL_RES *result) {
-	if (result) {
-		mysql_free_result(result);
-		result = NULL;
-	}
-}
-
-void printResults() {
-
-}
 
 int main()
 {
-	/*
-		MYSQL* connect;
-	MYSQL_ROW row;
-	MYSQL_RES *res;
-	connect = mysql_init(0);
-	connect = mysql_real_connect(connect, "localhost", "root", "zgsx1997", "save", 3306, NULL, CLIENT_MULTI_STATEMENTS);
-	if (!connect) {
-		cout << "MySQL connect failed!" << mysql_error(connect) << endl;
-	}
-	string sql = "";
-	
-	
-	Account account = Account::create("dfdfd").city("city").dob("dib");
-	*/
 
 	MySQLConnector* mysql = new MySQLConnector("localhost", "root", "zgsx1997", "save");
 
 	//get results by rule1
+	cout << "get results by rule1:" << endl;
 	vector<RuleOneResp> resultOne = mysql->filterByRuleOne();
 	Util::printResultsForRuleOne(resultOne);
+	Util::saveRuleOneResultsInFile(resultOne, "rule_one_result.txt");
+	cout << "finish saving results in file: rule_one_result.txt" << endl;
 
 	//get results by rule2
+	cout << endl << "get results by rule2: " << endl;
 	vector<RuleTwoResp> resultTwo = mysql->filterByRuleTwo();
 	Util::printResultsForRuleTwo(resultTwo);
+	Util::saveRuleTwoResultsInFile(resultTwo, "rule_two_result.txt");
+	cout << "finish saving results in file: rule_two_result.txt" << endl;
 
-	
+
+	system("pause");
 
 }
 

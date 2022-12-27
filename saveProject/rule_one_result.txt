@@ -1,0 +1,32 @@
++--------------------+--------------------+--------------------+--------------------------------------------------+------------------------------+
+|Name                |Account Number      |Transaction Number  |Merchant                                          |Transaction Amount            |
++--------------------+--------------------+--------------------+--------------------------------------------------+------------------------------+
+|Michael Smith       |11111               |1                   |CFA Institute          4349515499    TX           |-1009.90                      |
+|Michael Smith       |11111               |15                  |KROGER #2 4000 POLK    HOUSTON        TX          |-2300.00                      |
+|John Doe            |22222               |10                  |Best Buy		New York       NY                       |-10000.00                     |
+|Weirather Daren     |23427               |1                   |APPLIED BANK PROCESSIN WILMINGTON    WI           |-89.00                        |
+|Sergi Alishia       |26603               |6                   |DOORDASH*BJS RESTAURAN 6506819470    NY           |-127.80                       |
+|Sawchuk Nelida      |28064               |19                  |CASH APP*              4153753176    NJ           |-40.00                        |
+|Rulapaugh Kati      |31593               |2                   |NORTH HOUSTON BEEMER L SPRING        KS           |-859.75                       |
+|Dilliard Leota      |32628               |16                  |IN *POOL TEC POOL AND  936-3213252   CA           |-1677.85                      |
+|Monica Abel         |33555               |10                  |Best Buy		New York       NY                       |-10000.00                     |
+|Inouye Veronika     |33717               |97                  |CINFIN-PERSONAL-INSUR  888-242-0888  CA           |-3785.00                      |
+|Inouye Veronika     |33717               |43                  |MIDWESTERN AUTO GROUP  DUBLIN        CA           |-3505.28                      |
+|Maclead Abel        |37226               |14                  |BEST BUY      00008706 SCOTTSDALE   NY            |-270.11                       |
+|Maclead Abel        |37226               |63                  |8898 E LEGACY BLVD     SCOTTSDALE     NY          |-303.00                       |
+|Maclead Abel        |37226               |10                  |NORDSTROM #0380        SCOTTSDALE    NY           |-464.62                       |
+|Maclead Abel        |37226               |70                  |HOUSTON S (713) 529-23 HOUSTON       NY           |-180.47                       |
+|Maclead Abel        |37226               |7                   |APPLE.COM/US           800-676-2775  NY           |-269.04                       |
+|Morasca Simona      |38829               |65                  |CFA Institute          4349515499    OH           |-1009.90                      |
+|Morasca Simona      |38829               |129                 |230 WEST ALABAMA APART 713-5298707   OH           |-1263.27                      |
+|Morasca Simona      |38829               |76                  |230 WEST ALABAMA APART 713-5298707   OH           |-1266.56                      |
+|Morasca Simona      |38829               |64                  |COMMODITY SYSTEMS INC  5613928663    OH           |-350.00                       |
+|Morasca Simona      |38829               |72                  |SPRINT WIRELESS        800-639-6111  OH           |-199.60                       |
+|Joseph Dark         |43991               |1                   |CFA Institute          4349515499    MI           |-1009.90                      |
+|Artie Venn          |44891               |10                  |Best Buy		New York       NY                       |-10000.00                     |
+|Lenord Paps         |46762               |3                   |Burger King       AK                              |-85.04                        |
+|Don Fuller          |53111               |1                   |CFA Institute          4349515499    OH           |-1009.90                      |
+|Tanner Mitchel      |54566               |4                   |Starbucks		Chicago       IL                       |-100.73                       |
+|Dilliard Smith      |54722               |1                   |CFA Institute          4349515499    CA           |-1009.90                      |
+|May Wilson          |54999               |1                   |CFA Institute          4349515499    PA           |-1009.90                      |
++--------------------+--------------------+----------+--------------------------------------------------+------------------------------+
