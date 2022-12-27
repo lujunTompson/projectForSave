@@ -50,7 +50,7 @@ foreign key:
 
 ![image-20221227114922159](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114922159.png)
 
-`account_info.sql` and `transaction.sql` files are the sql scripts to create two tables. 
+`account_info_schema.sql` and `transaction_schema.sql` files are the sql scripts to create two tables. 
 
 ### Import
 
@@ -87,3 +87,8 @@ Rule 1 result:
 Rule 2 result:
 
 ![image-20221227124857085](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227124857085.png)
+
+
+
+
+
