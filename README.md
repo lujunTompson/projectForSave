@@ -13,6 +13,8 @@
 
 `Util.h` and `Util.cpp` : defines a class `Util` which is specially used for data input and output operation such as printing the query results to screen and files.
 
+
+
 ## Data preprocessing
 
 Use `pandas` to do data preprocessing for two csv files. Main steps include:
@@ -29,6 +31,10 @@ For `transactions.csv` :
 3. replace `XXUS` with `XX` in `merchant_description`: some value in `merchant_description` end with `XXUS`. It should only include the state abbreviation. we delete `US` for date format consistency. For example, `MAVERIK #488 DRAPER LAUS`  converts to `MAVERIK #488 DRAPER LA`.
 
 After we finish data preprocessing, we export the data to csv files. `account_info_new.csv` and `transaction_new.csv` in `doc` directory are data being cleaned.
+
+Relevant python code is in `data_cleaning.ipynb`
+
+
 
 ## Database details
 
@@ -58,6 +64,8 @@ foreign key:
 
 We use `Navicat` to import csv data directly into MySQL database.
 
+
+
 ## Rule 1
 
 Here we want to detect abnormally high transaction amount in the transaction table. We have some possible methods to do outliers detection. When we consider customers' purchasing behaviors, we see that the purchasing amount value greatly depends on the merchant category and the customers' purchasing habit. Therefore, the distribution of amount value would not be standard distribution. It's more like a cluster distribution. For example, if a user buys digital devices from BestBuy, then the average amount value would be quite higher than if the user buys stuff from HEB or Walmart.  So we decide to use boxplots method. Because it consider the lower quartile and higher quartile, which covers the major range of amount value that the user usually spends. The abnormal standard is :
@@ -70,11 +78,15 @@ transaction_amount > 1Quartile + 15 * (3Quartile - 1Quartile)
 
 We write a sql statement to do this work, which is in `rule1.sql`
 
+
+
 ## Rule 2
 
 Rule 1 is relatively easier to implement compared to rule 2. We just join two tables based on `account_number` and then check if the `state` field in `account_info` table is equal to the state information in `merchant_description` of `transaction` table. 
 
 We also write a sql statement to do this work, which is in `rule2.sql`  
+
+
 
 ## Running Results
 
