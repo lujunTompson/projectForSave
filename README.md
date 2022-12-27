@@ -38,17 +38,19 @@ We use local MySQL database. The database name is `save`.
 
 Here we have two tables:
 
-`account_info` table schema:![image-20221227114740608](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114740608.png)
+`account_info` table schema:
+
+![image-20221227114740608](https://user-images.githubusercontent.com/64528390/209716189-306f1727-dc8d-445b-86d3-15b21792ab95.png)
 
 
 
 `transaction` table schema:
 
-![image-20221227114843883](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114843883.png)
+![image-20221227114843883](https://user-images.githubusercontent.com/64528390/209716236-bccce83e-9ded-4b4a-bed9-dc2aeb990ad9.png)
 
 foreign key:
 
-![image-20221227114922159](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227114922159.png)
+![image-20221227114922159](https://user-images.githubusercontent.com/64528390/209716278-42c807e6-037c-4a31-b0b0-276b5e649b63.png)
 
 `account_info_schema.sql` and `transaction_schema.sql` files are the sql scripts to create two tables. 
 
@@ -64,7 +66,7 @@ Here we want to detect abnormally high transaction amount in the transaction tab
 transaction_amount > 1Quartile + 15 * (3Quartile - 1Quartile)
 ```
 
-![image-20221227122754395](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227122754395.png)
+![image-20221227122754395](https://user-images.githubusercontent.com/64528390/209716300-74c8b16f-a3ba-42ce-907d-a594e147d560.png)
 
 We write a sql statement to do this work, which is in `rule1.sql`
 
@@ -80,13 +82,13 @@ We also write a sql statement to do this work, which is in `rule2.sql`
 
 Rule 1 result:
 
-![image-20221227124836321](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227124836321.png)
+![image-20221227124836321](https://user-images.githubusercontent.com/64528390/209716325-e2846605-c0e1-4600-bb64-0164f4d9d442.png)
 
 
 
 Rule 2 result:
 
-![image-20221227124857085](C:\Users\86139\AppData\Roaming\Typora\typora-user-images\image-20221227124857085.png)
+![image-20221227124857085](https://user-images.githubusercontent.com/64528390/209716354-f8bdee1b-7a2e-418f-bfe8-45f03ce0ebfe.png)
 
 
 
